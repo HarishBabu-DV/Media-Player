@@ -7,3 +7,7 @@
   export const getAllVideos=async ()=>{
     return await commonAPI('GET',`${serverURL}/videos`,"")
   }
+
+  export const deleteVideo=async (id) => {
+    return await commonAPI('DELETE',`${serverURL}/videos/${id}`,{})
+  }

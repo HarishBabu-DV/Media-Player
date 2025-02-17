@@ -11,11 +11,12 @@ import {
     IconBoxAlignRightFilled
 } from "@tabler/icons-react"
 import { getAllVideos } from '../../services/allAPI'
-import { videoUploadStatus } from '../../context/Context'
+import { deleteVideoStatus, videoUploadStatus } from '../../context/Context'
 
 const AllVideoSection = () => {
 
   const {videoStatus}=useContext(videoUploadStatus)
+  const {deleteStatus}=useContext(deleteVideoStatus)
   const [allVideos,setAllVideos]=useState([])
   const fetchAllVideos=async () => {
     const result =await getAllVideos();
@@ -25,7 +26,7 @@ const AllVideoSection = () => {
   
   useEffect(function(){
     fetchAllVideos()
-  },[videoStatus]
+  },[videoStatus,deleteStatus]
   )
   
   return (
@@ -35,6 +36,7 @@ const AllVideoSection = () => {
             allVideos.map((item,i)=>{
               return <BentoGridItem 
                 key={i}
+                id={item.id}
                 title={item?.name}
                 header={item.embedURL || <Skeleton className={'h-full'}/>}
                 className={`bg-transparent border-2 border-orange-500 ${ i === 3 || i === 6 ? "md:col-span-2" : ""}`}

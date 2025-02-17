@@ -2,8 +2,13 @@ import { Edit } from "lucide-react";
 import { cn } from "../lib/utils"
 import { Button } from "./button";
 import { Trash } from "lucide-react";
+import { deleteVideo } from "../../services/allAPI";
+import { toast } from "sonner";
+import { useContext } from "react";
+import { deleteVideoStatus } from "../../context/Context";
 
-export const BentoGrid = ({ className,children }) => {
+export const BentoGrid =({ className,children }) => {
+ 
   return (
     <div
       className={cn(
@@ -15,7 +20,19 @@ export const BentoGrid = ({ className,children }) => {
   );
 };
 
-export const BentoGridItem = ({ key, title, header,className}) => {
+export const BentoGridItem = ({ key, title, header,className,id}) => {
+  const {deleteStatus,setDeleteStatus}=useContext(deleteVideoStatus)
+  
+  const handleDelete=async (id)=>{
+    const res=await deleteVideo(id);
+    if(res.status===200){
+      setDeleteStatus(!deleteStatus)
+      toast.success("Deleted successfully")
+    }else{
+      toast.error("something went wrong")
+    }
+    console.log(res);
+  }
   return (
     <div
       className={cn(
@@ -31,7 +48,7 @@ export const BentoGridItem = ({ key, title, header,className}) => {
           <div
             className="font-sans font-normal text-neutral-600 text-xs dark:text-neutral-300 flex justify-between items-center">
              <Button className=""> <Edit /></Button>
-             <Button className="bg-red-500"> <Trash /></Button>
+             <Button className="bg-red-500" onClick={()=>handleDelete(id)}> <Trash /></Button>
           </div>
          </div>
     </div>

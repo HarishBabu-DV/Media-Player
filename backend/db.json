@@ -89,42 +89,6 @@
       "videoURL": "https://youtu.be/44FTAS-qT8Q?si=m6ihbrcz96vV8FqC",
       "embedURL": "https://youtube.com/embed/44FTAS-qT8Q?si=m6ihbrcz96vV8FqC",
       "id": 15
-    },
-    {
-      "name": "css",
-      "videoURL": "https://youtu.be/44FTAS-qT8Q?si=m6ihbrcz96vV8FqC",
-      "embedURL": "https://youtube.com/embed/44FTAS-qT8Q?si=m6ihbrcz96vV8FqC",
-      "id": 16
-    },
-    {
-      "name": "day",
-      "videoURL": "https://youtu.be/Vw6utYElVFg?si=VkobGxmZx2X4YVHK",
-      "embedURL": "https://youtube.com/embed/Vw6utYElVFg?si=VkobGxmZx2X4YVHK",
-      "id": 17
-    },
-    {
-      "name": "english",
-      "videoURL": "https://youtu.be/dCrf4o2307Q?si=Tq3i6nIGzIdFGxNA",
-      "embedURL": "https://youtube.com/embed/dCrf4o2307Q?si=Tq3i6nIGzIdFGxNA",
-      "id": 18
-    },
-    {
-      "name": "aria html",
-      "videoURL": "https://youtu.be/0hqhAIjE_8I?si=wNNXd9g8C0bfh4NO",
-      "embedURL": "https://youtube.com/embed/0hqhAIjE_8I?si=wNNXd9g8C0bfh4NO",
-      "id": 19
-    },
-    {
-      "name": "entropy",
-      "videoURL": "https://youtu.be/DxL2HoqLbyA?si=ZZQcA33G0foIrso6",
-      "embedURL": "https://youtube.com/embed/DxL2HoqLbyA?si=ZZQcA33G0foIrso6",
-      "id": 20
-    },
-    {
-      "name": "readme",
-      "videoURL": "https://youtu.be/onUx22pgiBM?si=7qGUaW5Te-m5Ydcu",
-      "embedURL": "https://youtube.com/embed/onUx22pgiBM?si=7qGUaW5Te-m5Ydcu",
-      "id": 21
     }
   ]
 }
