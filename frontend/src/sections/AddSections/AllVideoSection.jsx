@@ -17,6 +17,7 @@ const AllVideoSection = () => {
 
   const {videoStatus}=useContext(videoUploadStatus)
   const {deleteStatus}=useContext(deleteVideoStatus)
+  const {updateStatus,setUpdateStatus}=useContext(videoUploadStatus)
   const [allVideos,setAllVideos]=useState([])
   const fetchAllVideos=async () => {
     const result =await getAllVideos();
@@ -26,7 +27,7 @@ const AllVideoSection = () => {
   
   useEffect(function(){
     fetchAllVideos()
-  },[videoStatus,deleteStatus]
+  },[videoStatus,deleteStatus,updateStatus]
   )
   
   return (

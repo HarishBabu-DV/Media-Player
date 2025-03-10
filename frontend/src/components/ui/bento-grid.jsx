@@ -2,10 +2,27 @@ import { Edit } from "lucide-react";
 import { cn } from "../lib/utils"
 import { Button } from "./button";
 import { Trash } from "lucide-react";
-import { deleteVideo } from "../../services/allAPI";
+import { deleteVideo, updateVideo } from "../../services/allAPI";
 import { toast } from "sonner";
 import { useContext } from "react";
-import { deleteVideoStatus } from "../../context/Context";
+import { deleteVideoStatus, videoUploadStatus } from "../../context/Context";
+import { useState } from "react";
+import { FolderUp } from 'lucide-react';
+import { Label } from "./label"
+import { Input } from './input';
+import {
+    Dialog,
+    DialogContent,
+    DialogDescription,
+    DialogFooter,
+    DialogHeader,
+    DialogTitle,
+    DialogTrigger,
+    DialogClose
+  } 
+
+from "./dialog"
+
 
 export const BentoGrid =({ className,children }) => {
  
@@ -22,7 +39,7 @@ export const BentoGrid =({ className,children }) => {
 
 export const BentoGridItem = ({ key, title, header,className,id}) => {
   const {deleteStatus,setDeleteStatus}=useContext(deleteVideoStatus)
-  
+  const {updateStatus,setUpdateStatus}=useContext(videoUploadStatus)
   const handleDelete=async (id)=>{
     const res=await deleteVideo(id);
     if(res.status===200){
@@ -33,6 +50,29 @@ export const BentoGridItem = ({ key, title, header,className,id}) => {
     }
     console.log(res);
   }
+
+  const [newVideoDetails,setNewVideoDetails]=useState({
+    videoName:'',
+    videoURL:'',
+    embedURL:''
+  })
+  const handleUpdate=async (id) => {
+    try {
+      const res=await updateVideo(id,newVideoDetails);
+      console.log(res);
+      if(res.status===200){
+        toast.success("updated successfully");
+        setUpdateStatus(!updateStatus)
+      }
+      else{
+        toast.error("something went wrong");
+      }
+    } catch (error) {
+      console.log(error);
+      
+    }
+  }
+
   return (
     <div
       className={cn(
@@ -47,7 +87,59 @@ export const BentoGridItem = ({ key, title, header,className,id}) => {
           </div>
           <div
             className="font-sans font-normal text-neutral-600 text-xs dark:text-neutral-300 flex justify-between items-center">
-             <Button className=""> <Edit /></Button>
+             <Dialog>
+                    <DialogTrigger asChild>
+                        <FolderUp />
+                    </DialogTrigger>
+                    <DialogContent className='sm:max-w-[425px] bg-black rounded-lg'>
+                        <DialogHeader>
+                            <DialogTitle>Edit profile</DialogTitle>
+                            <DialogDescription>
+                                Make changes to your profie here. Click save when you're done
+                            </DialogDescription>
+                        </DialogHeader>
+                        <div className='grid gap-4 py-4'>
+                            <div className='grid grid-cols-4 items-center gap-4'>
+                                <Label htmlFor="email" className='text-white'>
+                                    Name
+                                </Label>
+                                <Input type="text" id="name" className='w-fit text-white'
+                                name='name' placeholder='Enter name'
+                                onChange={(e)=>{
+                                setNewVideoDetails({
+                                  ...newVideoDetails,
+                                  videoName:e.target.value,
+                                })
+                                
+                                }}
+                              
+                                
+                                />
+                            </div>
+                            <div className='grid grid-cols-4 items-center gap-4'>
+                                <Label htmlFor="video" className='text-white'>
+                                    Video URL
+                                </Label>
+                                <Input type="text" id='video' className='w-fit text-white'
+                                name='video' placeholder='Enter name'
+                                onChange={(e)=>{
+                                setNewVideoDetails({
+                                ...newVideoDetails,
+                                videoURL:e.target.value,
+                                embedURL:e.target.value.replace(/youtu.be/g,"youtube.com/embed")
+
+                                })
+                             
+                                }}/>
+                            </div>
+                        </div>
+                        <DialogFooter>
+                            <DialogClose className='text-white' onClick={()=>handleUpdate(id)}>
+                              Update
+                            </DialogClose>
+                        </DialogFooter>
+                    </DialogContent>
+                </Dialog>
              <Button className="bg-red-500" onClick={()=>handleDelete(id)}> <Trash /></Button>
           </div>
          </div>

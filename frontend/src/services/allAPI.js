@@ -11,3 +11,7 @@
   export const deleteVideo=async (id) => {
     return await commonAPI('DELETE',`${serverURL}/videos/${id}`,{})
   }
+
+  export const updateVideo=async (id,reqBody) => {
+    return await commonAPI('PUT',`${serverURL}/videos/${id}`,reqBody);
+  }

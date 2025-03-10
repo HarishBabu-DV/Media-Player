@@ -39,7 +39,6 @@ const AddHeroSection = () => {
             console.log(res);
             setVideoStatus(!videoStatus)
             console.log(videoDetails);
-            
             if(res.status===201){
                 toast.success("video uploaded succesfully")
             }
