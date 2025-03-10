@@ -1,94 +1,22 @@
 {
   "videos": [
     {
-      "name": "jwt ",
-      "videoURL": "https://youtu.be/AcYF18oGn6Y?feature=shared",
-      "embedURL": "https://youtube.com/embed/AcYF18oGn6Y?feature=shared",
+      "videoName": "resume",
+      "videoURL": "https://youtu.be/qhocVNbvNHs?si=6SbxyU9aef2Gvi_Z",
+      "embedURL": "https://youtube.com/embed/qhocVNbvNHs?si=6SbxyU9aef2Gvi_Z",
       "id": 1
     },
     {
-      "name": "session vs jwt",
-      "videoURL": "https://youtu.be/fyTxwIa-1U0?feature=shared",
-      "embedURL": "https://youtube.com/embed/fyTxwIa-1U0?feature=shared",
+      "videoName": "front end design concepts",
+      "videoURL": "https://youtu.be/YO7R0rYWDl8?si=bgYvxB-pM8uW04Fm",
+      "embedURL": "https://youtube.com/embed/YO7R0rYWDl8?si=bgYvxB-pM8uW04Fm",
       "id": 2
     },
     {
-      "name": "front end web dev",
-      "videoURL": "https://youtu.be/TBIjgBVFjVI?feature=shared",
-      "embedURL": "https://youtube.com/embed/TBIjgBVFjVI?feature=shared",
+      "videoName": "mouse events",
+      "videoURL": "https://youtu.be/rdZrrXFLxuw?si=-cZbzIjI28VeHqQ6",
+      "embedURL": "https://youtube.com/embed/rdZrrXFLxuw?si=-cZbzIjI28VeHqQ6",
       "id": 3
-    },
-    {
-      "name": "github readme profile",
-      "videoURL": "https://youtu.be/cPVxMGgl0rQ?si=nEMHJDz6sYQw0_8C",
-      "embedURL": "https://youtube.com/embed/cPVxMGgl0rQ?si=nEMHJDz6sYQw0_8C",
-      "id": 4
-    },
-    {
-      "name": "js",
-      "videoURL": "https://youtu.be/_bOoM0S7zF8?si=Eubr-YDrnlWzqC8R",
-      "embedURL": "https://youtube.com/embed/_bOoM0S7zF8?si=Eubr-YDrnlWzqC8R",
-      "id": 5
-    },
-    {
-      "name": "react",
-      "videoURL": "https://youtu.be/FjEJ0yahkGw?si=_hLop43v-PFubK6l",
-      "embedURL": "https://youtube.com/embed/FjEJ0yahkGw?si=_hLop43v-PFubK6l",
-      "id": 6
-    },
-    {
-      "name": "asasdz",
-      "videoURL": "https://youtu.be/FjEJ0yahkGw?si=_hLop43v-PFubK6l",
-      "embedURL": "https://youtube.com/embed/FjEJ0yahkGw?si=_hLop43v-PFubK6l",
-      "id": 7
-    },
-    {
-      "name": "accessibility",
-      "videoURL": "https://youtu.be/1A6SrPwmGpg?si=9Kv2GCVzJN2gFhQo",
-      "embedURL": "https://youtube.com/embed/1A6SrPwmGpg?si=9Kv2GCVzJN2gFhQo",
-      "id": 8
-    },
-    {
-      "name": "self intro",
-      "videoURL": "https://youtu.be/WYc_0B_QwEo?si=71WpS9qOJfO1Ux9z",
-      "embedURL": "https://youtube.com/embed/WYc_0B_QwEo?si=71WpS9qOJfO1Ux9z",
-      "id": 9
-    },
-    {
-      "name": "dasd",
-      "videoURL": "https://youtu.be/VO0_nhTWKpw?si=vEhYzjEQrOz71ayl",
-      "embedURL": "https://youtube.com/embed/VO0_nhTWKpw?si=vEhYzjEQrOz71ayl",
-      "id": 10
-    },
-    {
-      "name": "api",
-      "videoURL": "https://youtu.be/bxuYDT-BWaI?si=ctVt033o9VJOQafw",
-      "embedURL": "https://youtube.com/embed/bxuYDT-BWaI?si=ctVt033o9VJOQafw",
-      "id": 11
-    },
-    {
-      "name": "API",
-      "videoURL": "https://youtu.be/bxuYDT-BWaI?si=ctVt033o9VJOQafw",
-      "embedURL": "https://youtube.com/embed/bxuYDT-BWaI?si=ctVt033o9VJOQafw",
-      "id": 12
-    },
-    {
-      "name": "aPI",
-      "videoURL": "https://youtu.be/bxuYDT-BWaI?si=ctVt033o9VJOQafw",
-      "embedURL": "https://youtube.com/embed/bxuYDT-BWaI?si=ctVt033o9VJOQafw",
-      "id": 13
-    },
-    {
-      "name": "api(api)",
-      "videoURL": "https://youtu.be/bxuYDT-BWaI?si=ctVt033o9VJOQafw",
-      "embedURL": "https://youtube.com/embed/bxuYDT-BWaI?si=ctVt033o9VJOQafw",
-      "id": 14
-    },
-    {
-      "name": "css",
-      "videoURL": "https://youtu.be/44FTAS-qT8Q?si=m6ihbrcz96vV8FqC",
-      "embedURL": "https://youtube.com/embed/44FTAS-qT8Q?si=m6ihbrcz96vV8FqC",
-      "id": 15
     }
   ]
 }
