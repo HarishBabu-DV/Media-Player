@@ -5,7 +5,7 @@ import React from 'react'
 
 const LandingPage = () => {
   return (
-   <section className='w-full'>
+   <section className='w-full landing-page-container'>
       <HeroSection />
       <FeatureSection />
       <AboutSection />

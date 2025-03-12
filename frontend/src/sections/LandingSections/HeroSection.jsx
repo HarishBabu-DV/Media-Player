@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 const HeroSection = () => {
   return (
-    <section>
+    <section className='landing-page-section-container'>
         <div className='flex  px-8 max-md:flex-col-reverse'>
             <div className='flex flex-col items-center justify-evenly gap-0 w-1/2
                             max-md:gap-4 max-md:py-8 max-md:w-full'>

@@ -3,7 +3,7 @@ import { Card,CardContent, CardDescription, CardTitle } from '../../components/u
 import { InteractiveHoverButton } from '../../components/ui/interactive-hover-button'
 const FeatureSection = () => {
   return (
-   <section>
+   <section className='landing-page-section-container'>
     
      <div className='grid grid-cols-3 justify-items-center  gap-x-8 px-20 py-6 
                     max-lg:py-0 max-lg:px-0
