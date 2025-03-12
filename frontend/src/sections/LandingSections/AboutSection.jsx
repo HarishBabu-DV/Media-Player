@@ -3,7 +3,6 @@ import { dummyMusicDetails } from './FeatureSection'
 
 const AboutSection = () => {
   return (
-    <>
     <section className='flex px-[10%] justify-center py-8 max-md:px-2 max-md:w-full'>       
         <div className='flex items-center border-4
                              border-orange-500 px-8 py-8 rounded-md 
@@ -32,7 +31,6 @@ const AboutSection = () => {
             </div>
         </div>
     </section>
-    </>
   )
 }
 
