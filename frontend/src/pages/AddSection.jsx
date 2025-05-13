@@ -4,7 +4,7 @@ import AllVideoSection from '../sections/AddSections/AllVideoSection'
 
 const AddSection = () => {
   return (
-    <main className='min-h-[100vh]'>
+    <main className='min-h-screen'>
       <AddHeroSection />
       <AllVideoSection />
     </main>
